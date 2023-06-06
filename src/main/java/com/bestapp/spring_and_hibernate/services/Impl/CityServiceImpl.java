@@ -22,7 +22,7 @@ public class CityServiceImpl implements CityService {
     }
 
     @Override
-    public City readById(int id) {
+    public City readById(Integer id) {
         return cityDAO.readById(id);
     }
 
@@ -38,7 +38,7 @@ public class CityServiceImpl implements CityService {
     }
 
     @Override
-    public City deleteCity(City city, int id) {
+    public City deleteCity(City city, Integer id) {
         cityDAO.deleteCity(city, id);
         return city;
     }

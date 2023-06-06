@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface EmployeeService {
     Employee create(Employee employee);
-    Employee readById(int id);
+    Employee readById(Integer id);
     List<Employee> readAll();
     Employee updateEmployee(Employee employee);
-    Employee deleteEmployee(Employee employee, int id);
+    Employee deleteEmployee(Employee employee, Integer id);
 }

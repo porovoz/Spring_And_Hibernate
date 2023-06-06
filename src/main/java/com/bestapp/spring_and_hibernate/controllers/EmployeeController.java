@@ -128,7 +128,7 @@ public class EmployeeController {
                     }
             )
     })
-    public ResponseEntity<Employee> readByIdEmployee(@PathVariable int id) {
+    public ResponseEntity<Employee> readByIdEmployee(@PathVariable Integer id) {
         Employee employee = employeeService.readById(id);
         if (employee == null) {
             ResponseEntity.notFound().build();
@@ -284,7 +284,7 @@ public class EmployeeController {
                     description = "Internal server error"
             )
     })
-    public ResponseEntity<Employee> deleteEmployee(@RequestBody Employee employee, @PathVariable int id) {
+    public ResponseEntity<Employee> deleteEmployee(@RequestBody Employee employee, @PathVariable Integer id) {
         Employee deletedEmployee = employeeService.deleteEmployee(employee, id);
         if (deletedEmployee == null) {
             ResponseEntity.notFound().build();

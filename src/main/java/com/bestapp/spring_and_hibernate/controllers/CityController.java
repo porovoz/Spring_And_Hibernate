@@ -128,7 +128,7 @@ public class CityController {
                     }
             )
     })
-    public ResponseEntity<City> readByIdCity(@PathVariable int id) {
+    public ResponseEntity<City> readByIdCity(@PathVariable Integer id) {
         City city = cityService.readById(id);
         if (city == null) {
             ResponseEntity.notFound().build();
@@ -284,7 +284,7 @@ public class CityController {
                     description = "Internal server error"
             )
     })
-    public ResponseEntity<City> deleteCity(@RequestBody City city, @PathVariable int id) {
+    public ResponseEntity<City> deleteCity(@RequestBody City city, @PathVariable Integer id) {
         City deletedCity = cityService.deleteCity(city, id);
         if (deletedCity == null) {
             ResponseEntity.notFound().build();
